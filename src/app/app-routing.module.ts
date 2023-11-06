@@ -4,6 +4,11 @@ import { AboutComponent } from './components/about/about.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
+import { OverviewComponent } from './components/products/product-detail/overview/overview.component';
+import { ProductDetailComponent } from './components/products/product-detail/product-detail.component';
+import { SpecsComponent } from './components/products/product-detail/specs/specs.component';
+import { VariantsComponent } from './components/products/product-detail/variants/variants.component';
+import { ProductsComponent } from './components/products/products.component';
 
 const routes: Routes = [
   {
@@ -16,8 +21,23 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    pathMatch: 'prefix',
     component: DashboardComponent,
+  },
+
+  {
+    path: 'products',
+    component: ProductsComponent,
+    children: [
+      {
+        path: 'detail/:id',
+        component: ProductDetailComponent,
+        children: [
+          { path: 'overview', component: OverviewComponent },
+          { path: 'variants', component: VariantsComponent },
+          { path: 'specs', component: SpecsComponent },
+        ],
+      },
+    ],
   },
   {
     path: '', // explain
@@ -32,7 +52,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes /*{ enableTracing: true }*/)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

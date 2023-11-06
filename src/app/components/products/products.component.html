@@ -1,0 +1,90 @@
+<h1>Buy now at 25% off</h1>
+<div class="flex-container">
+  gg
+  <table class="table">
+    <caption>
+      List of items on sale at 25 percent off.
+    </caption>
+
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Cost (USD)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th scope="row">{{ product.index }}</th>
+        <td>
+          <a [routerLink]="['detail', product.index]">{{ product.name }}</a>
+        </td>
+        <td>{{ product.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="sort">
+    <button class="sort-btn">
+      <span>Sort by: All</span>
+      <div class="sort-criteria">electronics</div>
+      <div class="sort-criteria">smartphones</div>
+      <div class="sort-criteria">laptops</div>
+    </button>
+
+    <span class="material-symbols-outlined"> arrow_drop_down </span>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<button class="btn btn-dark" routerLink="/home">Go home</button>
+<br />
+<p></p>
+
+<!-- <ng-container
+  ><app-product-detail [product]="products"></app-product-detail
+></ng-container> -->
+
+<!--
+
+   rough implementation; present this first before using ngfor and/or content projection
+
+
+  <h1>Buy now at 25% off</h1>
+<table class="table">
+  <caption>
+    List of items on sale at 25 percent off.
+    <th>
+      <tr *ngFor="let product of products">
+        <td>Id</td>
+        <td>Name</td>
+        <td>Cost</td>
+      </tr>
+    </th>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </caption>
+</table> -->

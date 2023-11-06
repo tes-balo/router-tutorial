@@ -1,0 +1,1 @@
+I mainly use GitHub for hosting my personal projects and contributing to Open Source when once in a while. As a student, I have enjoyed using Figma, GitKraken, and Educative for free. This wouldn't have been possible without access to the GitHub education pack and I would be happy if I can renew it to keep enjoying these benefits while I'm still in school. Thank you

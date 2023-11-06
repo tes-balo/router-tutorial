@@ -1,0 +1,4 @@
+{
+  "editor.fontSize": 15,
+  "angular2-switcher.styleFormats": [".scss", ".sass", ".less", ".css"]
+}

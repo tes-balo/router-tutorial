@@ -7,6 +7,11 @@ import { AboutComponent } from './components/about/about.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductDetailComponent } from './components/products/product-detail/product-detail.component';
+import { VariantsComponent } from './components/products/product-detail/variants/variants.component';
+import { OverviewComponent } from './components/products/product-detail/overview/overview.component';
+import { SpecsComponent } from './components/products/product-detail/specs/specs.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +20,11 @@ import { ErrorComponent } from './components/error/error.component';
     DashboardComponent,
     HomeComponent,
     ErrorComponent,
+    ProductsComponent,
+    ProductDetailComponent,
+    VariantsComponent,
+    OverviewComponent,
+    SpecsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

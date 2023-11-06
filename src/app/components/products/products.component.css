@@ -1,0 +1,27 @@
+.sort {
+display: flex;
+flex-direction: row;
+
+}
+.sort-criteria {
+  /* display: inline-block; */
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.flex-container > * {
+  flex-basis: 100%;
+}
+
+.sort-criteria {
+  /* display: none; */
+}
+
+table {
+  width: 80%;
+}
+
